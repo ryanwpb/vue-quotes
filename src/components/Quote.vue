@@ -1,5 +1,5 @@
 <template>
-    <div class="quotes">
+    <div class="quote">
         <slot></slot>
     </div>
 </template>
