@@ -1,22 +1,31 @@
 <template>
   <div class="container">
+      <NewQuote @quoteAdded="newQuote"/>
     <QuoteGrid :quotes="quotes"/>
   </div>
 </template>
 
 <script>
-import QuoteGrid from './components/QuoteGrid.vue'
+import QuoteGrid from './components/QuoteGrid.vue';
+import NewQuote from './components/NewQuote.vue'
 export default {
   name: 'App',
   components: {
     QuoteGrid,
+    NewQuote,
   },
   data: function() {
       return {
           quotes: ['Placeholder quote here...'],
           maxQuotes: 10,
       }
-  }
+  },
+  methods: {
+      newQuote(quote) {
+          this.quotes.push(quote)
+      }
+  } 
+
 }
 </script>
 
