@@ -32,7 +32,7 @@ export default {
 }
 .container {
   text-align: center;
-  color: #2c3e50;
+  color: #273f57;
   margin: 2rem auto;
   max-width: 1290px;
 }
