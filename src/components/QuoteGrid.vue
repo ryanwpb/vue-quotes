@@ -1,8 +1,8 @@
 <template>
     <div>
-        <appQuote :key="quote" v-for="quote in quotes">
+        <Quote :key="quote" v-for="quote in quotes">
             {{ quote }}
-        </appQuote>
+        </Quote>
     </div>
 </template>
 
@@ -12,7 +12,7 @@ import Quote from './Quote'
 export default {
     props: ['quotes'],
     components: {
-        appQuote: Quote
+        Quote
     },
 }
 </script>

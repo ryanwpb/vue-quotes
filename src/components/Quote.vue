@@ -1,5 +1,5 @@
 <template>
-    <div class="panel">
+    <div class="quotes">
         <slot></slot>
     </div>
 </template>
