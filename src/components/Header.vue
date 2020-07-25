@@ -20,11 +20,9 @@ export default {
 .header {
     margin: 3rem auto;
 }
-/* 
+
 .progress-bar {
-    padding: .5rem;
-    background: #e5e5e5;
-    border-radius: .25rem;
-} */
+ background: #F3136F;
+} 
 
 </style>
