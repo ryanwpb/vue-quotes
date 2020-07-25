@@ -3,7 +3,7 @@
         <h3>What's Your Favorite Quote?</h3>
         <label for="quote">Quote</label>
         <textarea name="" id="" cols="30" rows="2" v-model="quote" placeholder="Add quote here..."></textarea>
-        <button type="submit" @click.prevent="createNew">Add Quote</button>
+        <input type="submit" @click.prevent="createNew" value="Add Quote">
     </form>
 </template>
 
@@ -33,7 +33,7 @@ form {
     border-radius: .25rem;
 }
 
-textarea, button {
+textarea, input {
     display: block;
     width: 100%;
     border-radius: .25rem;
@@ -45,7 +45,7 @@ textarea {
     border: solid 1px #ccc;
 }
 
-button {
+input {
     background: #F3136F;
     color: #fff;
     padding: .5rem;
@@ -55,7 +55,12 @@ button {
     transition: all 0.2s ease-in-out;
 }
 
-button:hover {
+input:active {
     box-shadow: none;
+    outline: none;
+}
+
+input:focus {
+    outline: none;
 }
 </style>

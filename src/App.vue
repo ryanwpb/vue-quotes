@@ -1,7 +1,7 @@
 <template>
   <div class="container">
       <NewQuote @quoteAdded="newQuote"/>
-    <QuoteGrid :quotes="quotes"/>
+    <QuoteGrid :quotes="quotes" @quoteDeleted="deleteQuote"/>
   </div>
 </template>
 
@@ -23,6 +23,9 @@ export default {
   methods: {
       newQuote(quote) {
           this.quotes.push(quote)
+      },
+      deleteQuote(quote) {
+          this.quotes.splice(quote)
       }
   } 
 
@@ -35,7 +38,7 @@ export default {
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, Helvetica, Arial, sans-serif;
-
+    letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
