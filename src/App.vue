@@ -21,15 +21,19 @@ export default {
   data: function() {
       return {
           quotes: [],
-          maxQuotes: 10
+          maxQuotes: 10,
       }
   },
   methods: {
       newQuote(quote) {
-          this.quotes.push(quote)
+          if(this.quotes.length >= this.maxQuotes) {
+            alert('You must delete some quotes first');
+            return false;
+          }
+          this.quotes.push(quote);
       },
       deleteQuote(index) {
-          this.quotes.splice(index, 1)
+          this.quotes.splice(index, 1);
       }
   } 
 
