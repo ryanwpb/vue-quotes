@@ -24,8 +24,8 @@ export default {
       newQuote(quote) {
           this.quotes.push(quote)
       },
-      deleteQuote(quote) {
-          this.quotes.splice(quote)
+      deleteQuote(index) {
+          this.quotes.splice(index, 1)
       }
   } 
 
