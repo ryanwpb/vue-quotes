@@ -20,7 +20,7 @@ export default {
     transition: all 0.2s ease-in-out;
 }
 
-.quote:hover {
+.quote:hover, .quote:active {
     color: #fff;
     background: rgb(243 156 196);
     box-shadow: 3px 10px 20px 0px rgb(243 156 196);
