@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+      <Header />
       <NewQuote @quoteAdded="newQuote"/>
     <QuoteGrid :quotes="quotes" @quoteDeleted="deleteQuote"/>
   </div>
@@ -7,10 +8,12 @@
 
 <script>
 import QuoteGrid from './components/QuoteGrid.vue';
-import NewQuote from './components/NewQuote.vue'
+import NewQuote from './components/NewQuote.vue';
+import Header from './components/Header.vue'
 export default {
   name: 'App',
   components: {
+    Header,
     QuoteGrid,
     NewQuote,
   },
