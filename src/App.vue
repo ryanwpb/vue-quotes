@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <Header />
+      <Header :quoteCount="quotes.length" :maxQuotes="maxQuotes"/>
       <NewQuote @quoteAdded="newQuote"/>
     <QuoteGrid :quotes="quotes" @quoteDeleted="deleteQuote"/>
   </div>
@@ -20,7 +20,7 @@ export default {
   data: function() {
       return {
           quotes: ['Placeholder quote here...'],
-          maxQuotes: 10,
+          maxQuotes: 10
       }
   },
   methods: {
