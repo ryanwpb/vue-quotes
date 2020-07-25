@@ -19,7 +19,7 @@ export default {
   },
   data: function() {
       return {
-          quotes: ['Placeholder quote here...'],
+          quotes: [],
           maxQuotes: 10
       }
   },
