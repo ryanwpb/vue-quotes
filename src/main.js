@@ -12,3 +12,19 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
 }).$mount('#app')
+
+
+let submit = document.querySelector('#submit')
+
+submit.addEventListener('click', function() {
+  let alertMess = document.querySelector('.alert');
+  alertMess.style.display = 'block';
+  setTimeout(function(){ 
+    alertMess.classList.add('removed'); 
+  }, 3000);
+  if(alertMess.classList.contains('removed')) {
+    alertMess.classList.remove('removed');
+  } 
+})
+
+
